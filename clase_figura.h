@@ -36,11 +36,11 @@ const int COLUMNAS = C;
 class Figura {
 public:
     //constructors
-    Figura() { m_ColorFigura = NO_COLOR; m_TipusFigura = NO_FIGURA; }
-    ~Figura ()
+     Figura();
+    Figura(TipusFigura f, ColorFigura c, int x, int y, int forma_incial[3][3]);
 
     //mètodes
-    void inicialitza();
+    //void inicialitza();
     void giraFigura();
     void mouFigura(int direccio);
     void baixaFigura();
