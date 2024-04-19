@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include "clase_figura.h"
+
 using namespace std;
 
 void Figura::inicialitza() {
