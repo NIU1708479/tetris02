@@ -4,6 +4,9 @@
 
 using namespace std;
 
+const int FILAS = F;
+const int COLUMNAS = C;
+
 class Tauler {
 public:
     void inicialitza();
