@@ -28,6 +28,14 @@ typedef enum {
     NO_COLOR
 } ColorFigura;
 
+typedef enum {
+    GIR_HORARI = 0
+    gIR_ANTIHORARI
+}DireccioGir;
+
+const int FILAS = F;
+const int COLUMNAS = C;
+
 class Figura {
 public:
     Figura() { m_ColorFigura = NO_COLOR; m_TipusFigura = NO_FIGURA; }
