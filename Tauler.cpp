@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include "clase_tauler.h"
 using namespace std;
 
 void Tauler::inicialitza() {
