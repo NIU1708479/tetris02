@@ -1,12 +1,39 @@
 #include <iostream>
-#include <fstream>
 #include <sstream>
 #include "clase_figura.h"
 
 using namespace std;
 
-void Figura::inicialitza() {
-    //posicion y forma inicial
+Figura::Figura()
+{
+    m_tipus= NO_FIGURA;
+    m_color= NO_COLOR;
+    m_posicioX=0;
+    m_posicioY=0;
+
+    for (int i=0; i<3; i++)
+    {
+        for(int j=0; j<3;j++)
+        {
+            m_formaActual[i][j]=0;
+        }
+    }
+}
+
+Figura::Figura(TipusFigura f, ColorFigura c, int x, int y, int forma_incial[3][3])
+{
+    m_tipus= f;
+    m_color= c;
+    m_posicioX= x;
+    m_posicioY= y;
+
+     for (int i=0; i<3; i++)
+    {
+        for(int j=0; j<3;j++)
+        {
+            m_formaActual[i][j]= forma_incial[i][j];
+        }
+    }
 }
 
 void Figura::giraFigura() {
