@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include "clase_joc.h"
+
 using namespace std;
 
 void Joc::inicialitza(const string& nomFitxer) {
