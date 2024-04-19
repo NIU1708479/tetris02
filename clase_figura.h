@@ -1,7 +1,4 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
-
 using namespace std;
 
 typedef enum {
@@ -38,14 +35,28 @@ const int COLUMNAS = C;
 
 class Figura {
 public:
+    //constructors
     Figura() { m_ColorFigura = NO_COLOR; m_TipusFigura = NO_FIGURA; }
     ~Figura ()
+
+    //mètodes
     void inicialitza();
     void giraFigura();
     void mouFigura(int direccio);
     void baixaFigura();
     void dibuixaFigura() const;
     bool colisiona(const vector<vector<int>>& tauler) const;
+
+    //getters i setters
+    ColorFigura getColor() const { return m_color;}
+    TipusFigura getTipus() const {return m_tipus;}
+    int getX()const {return m_posicioX;}
+    int getY() const {return m_posicioY;}
+     
+    void setX(int pos_X) {m_posiciox=pos_X; }
+    void setY(int pos_y) {m_posicioY=pos_y; }
+    void setTipus (TipusFigura f) {m_tipus=f;}
+    void setColor (ColorFigura c) {m_color=c;}
 
 private:
     TipusFigura m_tipus;
